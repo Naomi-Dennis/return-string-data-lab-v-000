@@ -7,6 +7,11 @@ class ProductsController < ApplicationController
      Product.create!(product_params)
      redirect_to products_path 
   end 
+
+  def show_inventory
+
+     render erb:"inventory/show"
+  end 
    private 
    
     def product_params
