@@ -10,7 +10,7 @@ class ProductsController < ApplicationController
 
   def show_inventory
      inventory_id = params[:id]
-     @inventory_empty? = Product.find(inventory_id).inventory > 0
+     @inventory_empty = Product.find(inventory_id).inventory > 0
      render template: "inventory/show"
   end
    private
