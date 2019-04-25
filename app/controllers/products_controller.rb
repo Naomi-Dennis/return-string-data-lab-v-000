@@ -8,7 +8,7 @@ class ProductsController < ApplicationController
      redirect_to products_path
   end
 
-  def show_inventory
+  def inventory
      inventory_id = params[:id]
      @inventory_empty = (Product.find(inventory_id).inventory > 0).to_s
      render template: "inventory/show"
