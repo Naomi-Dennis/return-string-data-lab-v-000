@@ -1,4 +1,7 @@
 <% @products.each do |product| %>
+<div id="product-#{product.id}">
    <h2><%= product.name %> </h2>
    <p><%= product.description %></p>
+   <button>More Info</button>
+</div>
 <% end %>
