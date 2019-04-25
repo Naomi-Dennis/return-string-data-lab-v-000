@@ -10,7 +10,7 @@ class ProductsController < ApplicationController
 
   def show_inventory
 
-     render erb:"inventory/show"
+     render template: "inventory/show"
   end
    private
 
