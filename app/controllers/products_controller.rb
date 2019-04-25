@@ -11,6 +11,7 @@ class ProductsController < ApplicationController
   def inventory
      inventory_id = params[:id]
      @inventory_empty = (Product.find(inventory_id).inventory > 0).to_s
+     @inventory_empty
   end
    private
 
@@ -18,4 +19,3 @@ class ProductsController < ApplicationController
       params.permit(:name, :price, :inventory, :description)
     end
 end
-  
