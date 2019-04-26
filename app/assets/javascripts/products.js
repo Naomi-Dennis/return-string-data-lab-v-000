@@ -1,5 +1,1 @@
-document.onload = addAjaxButtons;
-
-function addAjaxButtons(){
-  
-}
+alert("Test")
