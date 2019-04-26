@@ -1,5 +1,5 @@
 <% @products.each do |product| %>
-<div id='<%= "product-#{product.id}"=>'>
+<div id='<%= "product-#{product.id}" %>'>
    <h2><%= product.name %> </h2>
    <p><%= product.description %></p>
    <button class="js-more-buttons" data-id='<%= "product-#{product.id}" %>'>More Info</button>
