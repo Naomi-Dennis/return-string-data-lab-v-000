@@ -17,10 +17,10 @@ function viewMore(){
      (data) => {
 
        if( data == "false"){
-          $("#" + id + "-section p").text("<p>Sold Out!</p>")
+          $("#" + id + "-section p").text("Sold Out")
        }
        else{
-          $("#" + id + "-section p").text("<p>Available!</p>")
+          $("#" + id + "-section p").text("Available!")
        }
 
      }
