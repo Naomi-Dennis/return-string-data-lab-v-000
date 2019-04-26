@@ -6,7 +6,5 @@ function init(){
 
 function viewMore(){
   let id = $(this).data("id")
-  $.get(`/products/${id}/body`, (data) => {
-    console.log(data)
-  })
+  $(id).appendChild("<p>Sold Out!</p>")
 }
