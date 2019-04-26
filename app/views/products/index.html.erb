@@ -15,12 +15,12 @@ function viewMore(){
   let id = $(this).data("id")
   $.get("/inventory", {"id": id.split("-")[1]},
      (data) => {
-
+  
        if( data == "false"){
-          $("#" + id + "-section p").text("Sold Out")
+          $("#" + id + "-section p").text("<p>Sold Out!</p>")
        }
        else{
-          $("#" + id + "-section p").text("Available!")
+          $("#" + id + "-section p").text("<p>Available!</p>")
        }
 
      }
@@ -30,10 +30,10 @@ function viewMore(){
 
 function showInventoryStatus(data, id){
   if( data == "false"){
-     $("#" + id + "-section").append("<p>Sold Out!</p>")
+     $("#" + id + "-section").html("<p>Sold Out!</p>")
   }
   else{
-     $("#" + id + "-section").append("<p>Available!</p>")
+     $("#" + id + "-section").html("<p>Available!</p>")
   }
 }
 </script>
