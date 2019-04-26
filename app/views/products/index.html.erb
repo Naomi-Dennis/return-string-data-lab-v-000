@@ -2,6 +2,6 @@
 <div id=`products-${product.id}`>
    <h2><%= product.name %> </h2>
    <p><%= product.description %></p>
-   <button class="js-more-buttons" data="<%= product-product-id %>">More Info</button>
+   <button class="js-more-buttons" data='<%= "product-#{product.id}" %>'>More Info</button>
 </div>
 <% end %>
