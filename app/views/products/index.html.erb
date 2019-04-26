@@ -21,8 +21,12 @@ function viewMore(){
 function showDescription(id){
   $("/description", id: id.split("-")[1],
      (data) =>{
-
-
+       if( data == "false"){
+          $("#" + id + "-section #description").text("<p>Sold Out!</p>")
+       }
+       else{
+          $("#" + id + "-section #description").text("<p>Available!</p>")
+       }
      }
   )
 }
