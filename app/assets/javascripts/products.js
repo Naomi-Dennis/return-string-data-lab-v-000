@@ -6,5 +6,6 @@ function init(){
 
 function viewMore(){
   let id = $(this).data("id")
+  console.log(id)
   $(id).appendChild("<p>Sold Out!</p>")
 }
