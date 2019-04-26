@@ -7,9 +7,9 @@ class ProductsController < ApplicationController
      Product.create!(product_params)
      redirect_to products_path
   end
-  def show 
+  def show
     @product = Product.find(params[:id])
-  end 
+  end
   def inventory
      inventory_id = params[:id]
      @inventory_empty = (Product.find(inventory_id).inventory > 0).to_s
