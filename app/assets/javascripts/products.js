@@ -1,7 +1,7 @@
 $(document).ready = init 
 
 function init(){
-  $(".js-more-buttdon").on("click", viewMore)
+  $(".js-more-buttons").on("click", viewMore)
 }
 
 function viewMore(){
