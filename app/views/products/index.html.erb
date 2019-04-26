@@ -20,6 +20,11 @@ function viewMore(){
 }
 
 function showInventoryStatus(data, id){
-  $("#" + id + "-section").append("<p>Sold Out!</p>")
+  if( data == "false"){
+     $("#" + id + "-section").append("<p>Sold Out!</p>")
+  }
+  else{
+     $("#" + id + "-section").append("<p>Available!</p>")
+  }
 }
 </script>
