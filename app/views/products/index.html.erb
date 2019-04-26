@@ -17,7 +17,7 @@ function viewMore(){
      (data) => {
        $("#" + id + "-section p").remove()
        if( data == "false"){
-          $("#" + id + "-section p").text("<p>Sold Out!</p>")
+          $("#" + id + "-section p").html("<p>Sold Out!</p>")
        }
        else{
           $("#" + id + "-section p").text("<p>Available!</p>")
