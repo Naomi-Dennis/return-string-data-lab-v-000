@@ -22,10 +22,10 @@ function showDescription(id){
   $("/description", id: id.split("-")[1],
      (data) =>{
        if( data == "false"){
-          $("#" + id + "-section #description").text("<p>Sold Out!</p>")
+          $("#" + id + "-section #description").text(data)
        }
        else{
-          $("#" + id + "-section #description").text("<p>Available!</p>")
+          $("#" + id + "-section #description").text(data)
        }
      }
   )
@@ -34,10 +34,10 @@ function showInventoryStatus(id){
   $.get("/inventory", {"id": id.split("-")[1]},
      (data) => {
        if( data == "false"){
-          $("#" + id + "-section #status").text("<p>Sold Out!</p>")
+          $("#" + id + "-section #status").text("Sold Out!")
        }
        else{
-          $("#" + id + "-section #status").text("<p>Available!</p>")
+          $("#" + id + "-section #status").text("Available!")
        }
 
      }
