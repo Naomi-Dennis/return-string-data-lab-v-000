@@ -15,7 +15,7 @@ class ProductsController < ApplicationController
      @inventory_empty = (Product.find(inventory_id).inventory > 0).to_s
      render plain:@inventory_empty
   end
-  
+
   def description
      product_id = params[:id]
      render plain: Product.find(product_id).description
