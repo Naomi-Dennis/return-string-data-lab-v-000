@@ -13,11 +13,11 @@
 
 function viewMore(){
   let id = $(this).data("id")
-
+  showInventoryStatus(id)
 
 }
 
-function showInventoryStatus(data, id){
+function showInventoryStatus(id){
   $.get("/inventory", {"id": id.split("-")[1]},
      (data) => {
        if( data == "false"){
