@@ -14,8 +14,12 @@
 function viewMore(){
   let id = $(this).data("id")
   $.get("/inventory", {"id": id.split("-")[1]},
-     showInventoryStatus()
+     showInventoryStatus(id)
   )
+  
+}
+
+function showInventoryStatus(){
   $("#" + id + "-section").append("<p>Sold Out!</p>")
 }
 </script>
