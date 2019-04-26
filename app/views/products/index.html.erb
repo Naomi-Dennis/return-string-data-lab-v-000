@@ -15,7 +15,7 @@ function viewMore(){
   let id = $(this).data("id")
   $.get("/inventory", {"id": id.split("-")[1]},
      (data) => {
-
+       
        if( data == "false"){
           $("#" + id + "-section p").text("Sold Out")
        }
