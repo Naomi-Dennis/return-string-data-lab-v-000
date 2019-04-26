@@ -14,7 +14,7 @@
 function viewMore(){
   let id = $(this).data("id")
   $.get("/inventory", {"id": id.split("-")[1]},
-     showInventoryStatus(id)
+     showInventoryStatus(data, id)
   )
 
 }
