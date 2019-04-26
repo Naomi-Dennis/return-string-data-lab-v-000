@@ -16,10 +16,10 @@ function viewMore(){
   $.get("/inventory", {"id": id.split("-")[1]},
      showInventoryStatus(id)
   )
-  
+
 }
 
-function showInventoryStatus(){
+function showInventoryStatus(id){
   $("#" + id + "-section").append("<p>Sold Out!</p>")
 }
 </script>
